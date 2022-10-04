@@ -15,15 +15,15 @@ const Footer = () => {
             <MDBContainer className='p-4'>
                 <section className='mb-4'>
                     <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-                        <MDBIcon fab icon='facebook-f' />
+                        <MDBIcon className='text-info' fab icon='facebook-f' />
                     </MDBBtn>
 
                     <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-                        <MDBIcon fab icon='twitter' />
+                        <MDBIcon className='text-info' fab icon='twitter' />
                     </MDBBtn>
 
                     <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-                        <MDBIcon fab icon='google' />
+                        <MDBIcon className='text-danger' fab icon='google' />
                     </MDBBtn>
 
                     <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
@@ -31,7 +31,7 @@ const Footer = () => {
                     </MDBBtn>
 
                     <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>
-                        <MDBIcon fab icon='linkedin-in' />
+                        <MDBIcon fab className='text-info' icon='linkedin-in' />
                     </MDBBtn>
 
                     <MDBBtn outline color="light" floating className='m-1' href='#!' role='button'>

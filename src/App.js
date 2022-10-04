@@ -4,6 +4,8 @@ import Events from './components/Events/Events';
 import Footer from './components/Footer/Footer';
 import { Routes, Route } from 'react-router';
 import MainHome from './components/MainHome';
+import Login from './components/Login/Login';
+import OtherLogin from './components/Others/OhterLogin';
 function App() {
   return (
     <div className="App">
@@ -13,9 +15,10 @@ function App() {
         <Route path="/mainHome" element={<MainHome />} />
         <Route path="/events" element={<Events />} />
         {/* <Route path="/about" element={<About />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signup" element={<SignUp />} /> */}
         <Route path="/login" element={<Login />} />
-        <Route path="*" element={<NotFound></NotFound>}></Route> */}
+        <Route path="/otherlogin" element={<OtherLogin />} />
+        {/* <Route path="*" element={<NotFound></NotFound>}></Route>  */}
       </Routes>
       <Footer></Footer>
     </div>
