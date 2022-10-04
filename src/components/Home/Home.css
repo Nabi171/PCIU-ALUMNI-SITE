@@ -1,0 +1,44 @@
+.nevr{  
+    padding: 0px;
+    color:rgb(31, 7, 7); 
+    font-size: 100%;  
+    margin-left: 50%;
+   text-align: center; 
+   font-style: italic;
+} 
+
+.heading{ 
+    color: rgb(54, 29, 29);
+    padding-left: 39px;
+    padding-right: 39px;
+    padding-top: 39px;
+    font-size: 250%;  
+    text-size-adjust: 30%; 
+    font-style: italic;
+} 
+.img11{
+    clip-path: circle();
+    width: 200px;
+    height: 200px;
+}
+.main{
+    overflow-x: hidden;
+}
+.banner-img {
+
+    background-image: url(../images/Convo1.jpg);
+    background-size: cover;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position-y: 70%;
+    height: 100%;
+}
+.banner-overlay {
+
+    background: rgba(0, 0, 0, 0.699);
+  
+}
+.img-logo{
+    width: 50px;
+    height: 50px;
+}
