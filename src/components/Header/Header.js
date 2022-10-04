@@ -5,7 +5,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 import imglogo from '../images/pciu.logo.png';
 import '../Header/Header.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
+import auth from '../firebase.init';
 const Header = () => {
+    const [user, loading, error] = useAuthState(auth);
+
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -31,12 +36,13 @@ const Header = () => {
                             <NavLink
                                 className={({ isActive }) => isActive ? "active-link" : "link"}
                                 to="/applyFrmembership">Apply For Membership</NavLink >
-                            <NavLink
-                                className={({ isActive }) => isActive ? "active-link" : "link"}
-                                to="/login">Login</NavLink >
-                            <NavLink
-                                className={({ isActive }) => isActive ? "active-link" : "link"}
-                                to="/signUp">SignUp</NavLink >
+                            {user ?
+                                <NavLink onClick={() => signOut(auth)}
+                                    className={({ isActive }) => isActive ? "active-link" : "link"}
+                                    to="/signup">SIGN OUT</NavLink > :
+                                <NavLink
+                                    className={({ isActive }) => isActive ? "active-link" : "link"}
+                                    to="/login">LOGIN</NavLink >}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

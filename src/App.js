@@ -6,6 +6,7 @@ import { Routes, Route } from 'react-router';
 import MainHome from './components/MainHome';
 import Login from './components/Login/Login';
 import OtherLogin from './components/Others/OhterLogin';
+import SignUp from './components/SignUp/SignUp';
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/otherlogin" element={<OtherLogin />} />
+        <Route path="/signUp" element={<SignUp />} />
         {/* <Route path="*" element={<NotFound></NotFound>}></Route>  */}
       </Routes>
       <Footer></Footer>

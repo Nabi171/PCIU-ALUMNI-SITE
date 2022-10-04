@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import './SignUp.css'
-import auth from '../../firebase.init';
+import auth from '../firebase.init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
-import OthersLogin from '../Others/OthersLogin';
-import Loading from '../Loading/Loading';
+import OtherLogin from '../Others/OhterLogin';
+
+// import Loading from '../Loading/Loading';
 const SignUp = () => {
     const [
         createUserWithEmailAndPassword,
@@ -24,7 +24,7 @@ const SignUp = () => {
     }
     const navigate = useNavigate();
     if (loading) {
-        <Loading />
+        // <Loading />
     }
     if (user) {
         navigate('/home')
@@ -74,9 +74,16 @@ const SignUp = () => {
 
             </form>
             <br />
-            <p className='fw bold'>Already have an account? <Link to='/login' className='text-danger pe-auto text-decoration-none fw-bold'>Please Login</Link></p>
-            <OthersLogin></OthersLogin>
+            <p className='fw bold text-white'>Already have an account? <Link to='/login' className='text-danger pe-auto text-decoration-none fw-bold'>Please Login</Link></p>
+
+
+            <h4 className='text-white'>Access in anotherway</h4>
+            <hr className='w-25 mx-auto text-white' />
+            <OtherLogin></OtherLogin>
         </div>
+
+
+
     );
 };
 
