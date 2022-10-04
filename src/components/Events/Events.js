@@ -14,7 +14,7 @@ const Events = () => {
                 <hr className=' w-25 text-white mx-auto hrpopular' />
             </div>
             <div className='row gy-4'>
-                <div className='col-lg-4 col-12 col-sm-12 col-md-6      container1 '>
+                <div className='col-lg-4 col-12 col-sm-12 col-md-6      container1'>
                     <img className='img1 img-fluid' src={imgConvo} alt="" srcset="" />
                     <div className="overlay1">
                         <div className="text1">First Convocation Photosession</div>

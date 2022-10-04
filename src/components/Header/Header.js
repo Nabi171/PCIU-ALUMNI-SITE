@@ -2,7 +2,9 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from 'react-router-dom';
 import imglogo from '../images/pciu.logo.png';
+import '../Header/Header.css'
 const Header = () => {
     return (
         <div>
@@ -14,13 +16,24 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto fw-bold">
-                            <Nav.Link href="#features">Home</Nav.Link>
-                            <Nav.Link href="#pricing">Members</Nav.Link>
-                            <Nav.Link href="#features">Events</Nav.Link>
-                            <Nav.Link href="#pricing">About Us</Nav.Link>
-                            <Nav.Link href="#features">Login</Nav.Link>
-                            <Nav.Link href="#pricing">Apply For Membership</Nav.Link>
-                            <Nav.Link href="#features">Contact</Nav.Link>
+                            <NavLink className={({ isActive }) => isActive ? "active-link" : "link"}
+                                to="/mainHome">Home</NavLink >
+                            <NavLink
+                                className={({ isActive }) => isActive ? "active-link" : "link"}
+                                to="/events">Events</NavLink >
+
+                            <NavLink
+                                className={({ isActive }) => isActive ? "active-link" : "link"}
+                                to="/features">Features</NavLink >
+                            <NavLink
+                                className={({ isActive }) => isActive ? "active-link" : "link"}
+                                to="/aboutus">AboutUs</NavLink >
+                            <NavLink
+                                className={({ isActive }) => isActive ? "active-link" : "link"}
+                                to="/applyFrmembership">Apply For Membership</NavLink >
+                            <NavLink
+                                className={({ isActive }) => isActive ? "active-link" : "link"}
+                                to="/login">Login</NavLink >
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
