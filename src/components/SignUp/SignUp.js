@@ -5,8 +5,7 @@ import { useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import OtherLogin from '../Others/OhterLogin';
-
-// import Loading from '../Loading/Loading';
+import Loading from '../Loading/Loading';
 const SignUp = () => {
     const [
         createUserWithEmailAndPassword,
@@ -24,10 +23,10 @@ const SignUp = () => {
     }
     const navigate = useNavigate();
     if (loading) {
-        // <Loading />
+        <Loading />
     }
     if (user) {
-        navigate('/home')
+        navigate('/mainHome')
     }
     const handlePassword = e => {
         SetPassword(e.target.value);

@@ -7,6 +7,9 @@ import MainHome from './components/MainHome';
 import Login from './components/Login/Login';
 import OtherLogin from './components/Others/OhterLogin';
 import SignUp from './components/SignUp/SignUp';
+import Membership from './components/Membership/Membership';
+import Gallery from './components/Gallery/Gallery';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 function App() {
   return (
     <div className="App">
@@ -14,12 +17,16 @@ function App() {
       <Routes>
         <Route path="/" element={<MainHome />} />
         <Route path="/mainHome" element={<MainHome />} />
-        <Route path="/events" element={<Events />} />
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/signup" element={<SignUp />} /> */}
+                <Route path="/events" element={
+                <RequireAuth>
+                  <Events></Events>
+                </RequireAuth>
+                } />
         <Route path="/login" element={<Login />} />
+        <Route path="/membership" element={<Membership />} />
         <Route path="/otherlogin" element={<OtherLogin />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/gallery" element={<Gallery />} />
         {/* <Route path="*" element={<NotFound></NotFound>}></Route>  */}
       </Routes>
       <Footer></Footer>

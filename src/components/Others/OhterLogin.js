@@ -2,6 +2,7 @@ import React from 'react';
 import { useSignInWithGoogle, useSignInWithGithub } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router';
 import auth from '../firebase.init';
+import Loading from '../Loading/Loading';
 const OtherLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
@@ -13,11 +14,11 @@ const OtherLogin = () => {
 
     }
     if (loading || loading1) {
-        // return <Loading></Loading>
+        return <Loading></Loading>
     }
 
     if (user || user1) {
-        navigate('/home')
+        navigate('/mainHome')
     }
     return (
         <div>

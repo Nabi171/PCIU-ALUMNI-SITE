@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import imglogo from '../images/pciu.logo.png';
 import '../Header/Header.css'
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -10,13 +10,14 @@ import { signOut } from 'firebase/auth';
 import auth from '../firebase.init';
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
+    console.log(user);
 
     return (
-        <div>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <div >
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
                 <Container>
                     <div><Navbar.Brand href="#home">PCIU</Navbar.Brand>
-                        <img className='img-logo' src={imglogo} alt="" />
+                        <Link to='/'><img className='img-logo' src={imglogo} alt="" /></Link>
                     </div>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -29,7 +30,7 @@ const Header = () => {
 
                             <NavLink
                                 className={({ isActive }) => isActive ? "active-link" : "link"}
-                                to="/features">Features</NavLink >
+                                to="/gallery">Gallery</NavLink >
                             <NavLink
                                 className={({ isActive }) => isActive ? "active-link" : "link"}
                                 to="/aboutus">AboutUs</NavLink >
@@ -39,10 +40,26 @@ const Header = () => {
                             {user ?
                                 <NavLink onClick={() => signOut(auth)}
                                     className={({ isActive }) => isActive ? "active-link" : "link"}
-                                    to="/signup">SIGN OUT</NavLink > :
+                                    to="/signup">SIGN OUT</NavLink >
+                                :
                                 <NavLink
                                     className={({ isActive }) => isActive ? "active-link" : "link"}
                                     to="/login">LOGIN</NavLink >}
+
+                            <li>{user &&
+
+                                <div>
+                                    <div className="text-info ms-1">
+                                        <span className="fw-bold">{user.displayName}</span>
+                                        <span>
+                                            <img className='rounded-circle w-25' src={user.photoURL
+                                            } alt="" srcset="" />
+                                        </span>
+                                    </div>
+                                </div>
+
+                            }</li>
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
