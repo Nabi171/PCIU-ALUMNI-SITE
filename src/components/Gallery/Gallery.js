@@ -1,9 +1,12 @@
 import React from 'react';
+import YoutubeEmbed from './YoutubeEmbed';
 
 const Gallery = () => {
     return (
-        <div>
-            <h1>this is Gallery</h1>
+        <div className='container'>
+            <h3 className='text-white text-center fw-bold'>Intro Of PCIU</h3>
+            <hr className='text-white w-25 mx-auto' />
+            <YoutubeEmbed embedId="9ugUd4MicYg" />
         </div>
     );
 };

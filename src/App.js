@@ -10,6 +10,7 @@ import SignUp from './components/SignUp/SignUp';
 import Membership from './components/Membership/Membership';
 import Gallery from './components/Gallery/Gallery';
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import AboutUs from './components/AboutUs/AboutUs';
 function App() {
   return (
     <div className="App">
@@ -17,16 +18,22 @@ function App() {
       <Routes>
         <Route path="/" element={<MainHome />} />
         <Route path="/mainHome" element={<MainHome />} />
-                <Route path="/events" element={
-                <RequireAuth>
-                  <Events></Events>
-                </RequireAuth>
-                } />
+        <Route path="/events" element={
+          <RequireAuth>
+            <Events></Events>
+          </RequireAuth>
+        } />
         <Route path="/login" element={<Login />} />
         <Route path="/membership" element={<Membership />} />
         <Route path="/otherlogin" element={<OtherLogin />} />
         <Route path="/signUp" element={<SignUp />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery" element={
+        <RequireAuth>
+          <Gallery />
+        </RequireAuth>
+        
+        } />
+        <Route path="/aboutus" element={<AboutUs />} />
         {/* <Route path="*" element={<NotFound></NotFound>}></Route>  */}
       </Routes>
       <Footer></Footer>

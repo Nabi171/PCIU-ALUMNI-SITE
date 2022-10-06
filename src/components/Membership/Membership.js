@@ -1,9 +1,10 @@
 import React from 'react';
+import AddDetails from './AddDetails';
 
 const Membership = () => {
     return (
-        <div>
-            <h1 className='text-white'>This is Membership</h1>
+        <div className='mt-3'>
+            <AddDetails></AddDetails>
         </div>
     );
 };
