@@ -1,0 +1,10 @@
+.img-container{
+    width: 180px;
+    height: 180px;
+ clip-path: circle()
+   
+}
+
+.card-container{
+    background-color: #F8E5E5;
+}

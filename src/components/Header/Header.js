@@ -36,7 +36,10 @@ const Header = () => {
                                 to="/aboutus">AboutUs</NavLink >
                             <NavLink
                                 className={({ isActive }) => isActive ? "active-link" : "link"}
-                                to="/membership">Apply For Membership</NavLink >
+                                to="/membership">Membership-Form</NavLink >
+                            <NavLink
+                                className={({ isActive }) => isActive ? "active-link" : "link"}
+                                to="/mems">Members</NavLink >
                             {user ?
                                 <NavLink onClick={() => signOut(auth)}
                                     className={({ isActive }) => isActive ? "active-link" : "link"}
@@ -45,6 +48,9 @@ const Header = () => {
                                 <NavLink
                                     className={({ isActive }) => isActive ? "active-link" : "link"}
                                     to="/login">LOGIN</NavLink >}
+                            <NavLink
+                                className={({ isActive }) => isActive ? "active-link" : "link"}
+                                to="/panel">Panel</NavLink >}
 
                             <li>{user &&
 

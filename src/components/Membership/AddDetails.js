@@ -3,9 +3,26 @@ import { useForm } from 'react-hook-form';
 import '../Membership/Addetails.css';
 const AddDetails = () => {
     const { register, handleSubmit } = useForm();
+    const onSubmit = data => {
+        console.log(data);
+        const url = `http://localhost:4000/members`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
+        alert('your id is succesfully added')
+    };
+    //sent to backend by post method 
     return (
         <div className='container mb-5'>
-            <form className="container-formTwo text-center form-all ">
+            <form onSubmit={handleSubmit(onSubmit)} className="container-formTwo text-center form-all ">
                 <div className="form-title">Add Your Deatils</div>
                 <div className="inputs-form">
                     <label className='form-label'>Your Name</label>

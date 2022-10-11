@@ -11,6 +11,8 @@ import Membership from './components/Membership/Membership';
 import Gallery from './components/Gallery/Gallery';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import AboutUs from './components/AboutUs/AboutUs';
+import ShowMember from './components/ShowMember/ShowMember';
+import Panel from './components/Panel/Panel';
 function App() {
   return (
     <div className="App">
@@ -25,13 +27,17 @@ function App() {
         } />
         <Route path="/login" element={<Login />} />
         <Route path="/membership" element={<Membership />} />
+        <Route path="/mems" element={<ShowMember />} />
         <Route path="/otherlogin" element={<OtherLogin />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/panel" element={<Panel />} />
+        {/* <Route path="/panel/:id" element={<Panel />} /> */}
+        {/* <Route path="/addMembers/:id" element={<Panel />} /> */}
         <Route path="/gallery" element={
-        <RequireAuth>
-          <Gallery />
-        </RequireAuth>
-        
+          <RequireAuth>
+            <Gallery />
+          </RequireAuth>
+
         } />
         <Route path="/aboutus" element={<AboutUs />} />
         {/* <Route path="*" element={<NotFound></NotFound>}></Route>  */}
