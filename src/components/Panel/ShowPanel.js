@@ -4,25 +4,25 @@ import { useParams } from 'react-router';
 
 const ShowPanel = (props) => {
 
-    const { name, imageLink, _id, phone, description, Supply, department } = props.member;
+    const { _id, name, imageLink, phone, description, Supply, department } = props.member;
     const [mems, setMems] = useState([]);
     useEffect(() => {
         fetch("http://localhost:4000/members")
             .then(res => res.json())
             .then(data => setMems(data))
     }, []);
-    const nd = useParams();
-    const handleDelete = nd => {
+    const id = useParams();
+    const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure to delete and reload the page after delete?');
         if (proceed) {
-            const url = `http://localhost:4000/members/${nd}`;
+            const url = `http://localhost:4000/members/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    const rest = mems.filter(mem => mem._id !== nd);
+                    const rest = mems.filter(mem => mem._id !== id);
                     setMems(rest);
                 })
         }
