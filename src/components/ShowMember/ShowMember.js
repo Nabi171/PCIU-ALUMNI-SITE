@@ -5,7 +5,7 @@ import ShowMemberinCard from './ShowMemberinCard';
 const ShowMember = () => {
     const [members, setMembers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/members')
+        fetch('http://localhost:4000/newmembers')
             .then(res => res.json())
             .then(data => setMembers(data));
     }, []);

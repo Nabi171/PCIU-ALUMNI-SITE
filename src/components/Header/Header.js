@@ -8,8 +8,10 @@ import '../Header/Header.css'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
 import auth from '../firebase.init';
+import useAdmin from '../Hooks/useAdmin';
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
+    const [admin] = useAdmin(user);
     console.log(user);
 
     return (
@@ -48,9 +50,19 @@ const Header = () => {
                                 <NavLink
                                     className={({ isActive }) => isActive ? "active-link" : "link"}
                                     to="/login">LOGIN</NavLink >}
-                            <NavLink
-                                className={({ isActive }) => isActive ? "active-link" : "link"}
-                                to="/panel">Panel</NavLink >}
+
+
+
+
+                            {admin &&
+                                <>
+                                    <NavLink
+                                        className={({ isActive }) => isActive ? "active-link" : "link"}
+                                        to="/panel">Panel</NavLink >}
+                        </>
+                            }
+
+
 
                             <li>{user &&
 
