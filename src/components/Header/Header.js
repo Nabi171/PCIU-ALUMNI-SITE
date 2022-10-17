@@ -15,7 +15,7 @@ const Header = () => {
     console.log(user);
 
     return (
-        <div >
+        <div className='sticky-top' >
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
                 <Container>
                     <div><Navbar.Brand href="#home">PCIU</Navbar.Brand>
@@ -58,7 +58,7 @@ const Header = () => {
                                 <>
                                     <NavLink
                                         className={({ isActive }) => isActive ? "active-link" : "link"}
-                                        to="/panel">Panel</NavLink >}
+                                        to="/MainPanel">Admin-Panel</NavLink >}
                         </>
                             }
 

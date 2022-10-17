@@ -55,19 +55,19 @@ const AddDetails = () => {
                 <div className="form-title">Add Your Deatils</div>
                 <div className="inputs-form">
                     <label className='form-label'>Your Name</label>
-                    <input className="form-input" type="text" placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
+                    <input className="form-input" type="text" placeholder='Name' required  {...register("name", { required: true, maxLength: 20 })} />
 
                     <label className='form-label'>Department Name</label>
-                    <input placeholder='department name' {...register("department")} className="form-input" type="text" />
+                    <input placeholder='department name' required {...register("department")} className="form-input" type="text" />
 
                     <label className='form-label'>Batch Name</label>
-                    <input placeholder='batch name' {...register("Supply")} className="form-input" type="text" />
+                    <input placeholder='batch name' required  {...register("Supply")} className="form-input" type="text" />
 
                     <label className='form-label'>Phone Number</label>
-                    <input placeholder='phone number' {...register("phone")} className="form-input" type="number" />
+                    <input placeholder='phone number' required  {...register("phone")} className="form-input" type="number" />
 
                     <label className='form-label'>Home Address</label>
-                    <input placeholder='home address' {...register("description")} className="form-input" type="text" />
+                    <input placeholder='home address' required  {...register("description")} className="form-input" type="text" />
 
                     <label className='form-label'>Img Link of youself</label>
                     <input placeholder='you can use imageBB for hosting your image' {...register("imageLink")} className="form-input" type="text" />
