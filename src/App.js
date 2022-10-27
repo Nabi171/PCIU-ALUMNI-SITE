@@ -14,6 +14,7 @@ import AboutUs from './components/AboutUs/AboutUs';
 import ShowMember from './components/ShowMember/ShowMember';
 // import Panel from './components/Panel/Panel';
 import MainPanel from './components/MainPanel/MainPanel';
+import NewsFeed from './components/NewsFeed/NewsFeed';
 function App() {
   return (
     <div className="App">
@@ -33,6 +34,7 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         {/* <Route path="/panel" element={<Panel />} /> */}
         <Route path="/mainPanel" element={<MainPanel />} />
+        <Route path="/newsFeed" element={<NewsFeed />} />
         {/* <Route path="/panel/:id" element={<Panel />} /> */}
         {/* <Route path="/addMembers/:id" element={<Panel />} /> */}
         <Route path="/gallery" element={
