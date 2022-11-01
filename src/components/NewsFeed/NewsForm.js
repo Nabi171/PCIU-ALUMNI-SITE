@@ -16,7 +16,7 @@ const NewsForm = () => {
             .then(result => {
                 console.log(result);
             })
-        alert('your id is succesfully added');
+        alert('your post is succesfully added');
         window.location.reload(false);
 
     };
@@ -39,7 +39,7 @@ const NewsForm = () => {
 
 
                         <h6 className='text-white fw-bold text-start mt-4'>Message</h6>
-                        <textarea {...register("message", { required: true, maxLength: 20 })} required name="message" className='p-3 w-100' />
+                        <textarea {...register("message", { required: true, maxLength: 6000 })} required name="message" className='p-3 w-100' />
 
 
 

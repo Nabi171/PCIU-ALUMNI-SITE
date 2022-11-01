@@ -45,10 +45,13 @@ const Header = () => {
                             <NavLink
                                 className={({ isActive }) => isActive ? "active-link" : "link"}
                                 to="/newsFeed">NewsFeed</NavLink >
+                            <NavLink
+                                className={({ isActive }) => isActive ? "active-link" : "link"}
+                                to="/newsForm">AddPost</NavLink >
                             {user ?
                                 <NavLink onClick={() => signOut(auth)}
                                     className={({ isActive }) => isActive ? "active-link" : "link"}
-                                    to="/signup">SIGN OUT</NavLink >
+                                    to="/signup">logOut</NavLink >
                                 :
                                 <NavLink
                                     className={({ isActive }) => isActive ? "active-link" : "link"}
