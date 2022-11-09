@@ -36,22 +36,29 @@ const Header = () => {
                             <NavLink
                                 className={({ isActive }) => isActive ? "active-link" : "link"}
                                 to="/aboutus">AboutUs</NavLink >
-                            <NavLink
-                                className={({ isActive }) => isActive ? "active-link" : "link"}
-                                to="/membership">Membership-Form</NavLink >
+
+                            {
+                                user && <NavLink
+                                    className={({ isActive }) => isActive ? "active-link" : "link"}
+                                    to="/membership">Membership-Form</NavLink >
+                            }
+
+
                             <NavLink
                                 className={({ isActive }) => isActive ? "active-link" : "link"}
                                 to="/mems">Members</NavLink >
 
-                                {
-                                    user &&  <NavLink
+                            {
+                                user && <NavLink
                                     className={({ isActive }) => isActive ? "active-link" : "link"}
                                     to="/newsFeed">NewsFeed</NavLink >
-                                }
-                           
-                            <NavLink
-                                className={({ isActive }) => isActive ? "active-link" : "link"}
-                                to="/newsForm">AddPost</NavLink >
+                            }
+                            {
+                                user && <NavLink
+                                    className={({ isActive }) => isActive ? "active-link" : "link"}
+                                    to="/newsForm">AddPost</NavLink >
+                            }
+
                             {user ?
                                 <NavLink onClick={() => signOut(auth)}
                                     className={({ isActive }) => isActive ? "active-link" : "link"}
