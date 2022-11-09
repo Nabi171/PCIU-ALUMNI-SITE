@@ -10,7 +10,7 @@ const StuNews = () => {
             .then(data => setPosts(data));
     }, []);
     return (
-        <div className='row'>
+        <div className='row gy-3'>
             {
                 posts ? posts.map(post => <ShowNews key={post.id} post={post}></ShowNews>) : <Loading />
 
@@ -18,5 +18,7 @@ const StuNews = () => {
         </div>
     );
 };
+
+
 
 export default StuNews;

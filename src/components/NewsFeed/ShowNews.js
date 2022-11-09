@@ -9,7 +9,7 @@ const ShowNews = ({ post }) => {
                 </blockquote>
                 <div className='d-flex justify-content-end align-items-center text-white'>
                     <hr className='text-white w-25' />
-                    <h6 className='ms-1'>Name:Saif</h6>
+                    <h6 className='ms-1'>Name:{name}</h6>
                 </div>
                 <h6 className='text-white text-end'>Departmet:{department}</h6>
                 <h6 className='text-white text-end'>Id No:1234</h6>
