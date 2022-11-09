@@ -22,7 +22,7 @@ const Subpaneladd = () => {
 
     };
     return (
-        <div className='position-fixed'>
+        <div>
             <div >
                 <form onSubmit={handleSubmit(onSubmit)} className="container-formTwo text-center  ">
 

@@ -32,7 +32,7 @@ const ShowNewmember = (props) => {
         }
     }
     return (
-        <div>
+        <div className='col-lg-4 gy-3'>
             <div>
 
                 <Col>

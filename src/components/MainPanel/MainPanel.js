@@ -4,20 +4,28 @@ import Subpaneladd from './Subpaneladd';
 import SubNewmemberDelete from './SubNewmemberDelete';
 
 const MainPanel = () => {
-    return (
-       <div className='container'>
-            <div className='row'>
-           <div className='col-lg-6'>
-           <Subpaneladd></Subpaneladd>
-           </div>
-           <div className='col-lg-6'>
-           <Panel></Panel>
-           </div>
-           <SubNewmemberDelete></SubNewmemberDelete>
-           
-        </div>
-       </div>
-    );
+   return (
+      <div className='container'>
+
+         {/* add member panel  */}
+         <div className='row'>
+            <div className='col-lg-6'>
+               <Subpaneladd></Subpaneladd>
+            </div>
+            <div className='col-lg-6'>
+               <Panel></Panel>
+            </div>
+
+            {/* manage member panel */}
+            <div className='mt-4'>
+               <h5 className='text-white mx-auto fw-bold'>Manage Members</h5>
+               <hr className='text-white' />
+            </div>
+            <SubNewmemberDelete></SubNewmemberDelete>
+
+         </div>
+      </div>
+   );
 };
 
 export default MainPanel;
