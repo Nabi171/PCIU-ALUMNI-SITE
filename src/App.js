@@ -16,6 +16,7 @@ import ShowMember from './components/ShowMember/ShowMember';
 import MainPanel from './components/MainPanel/MainPanel';
 import NewsFeed from './components/NewsFeed/NewsFeed';
 import NewsForm from './components/NewsFeed/NewsForm';
+import NotFound from './components/NotFound/NotFound';
 function App() {
   return (
     <div className="App">
@@ -35,8 +36,18 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         {/* <Route path="/panel" element={<Panel />} /> */}
         <Route path="/mainPanel" element={<MainPanel />} />
-        <Route path="/newsFeed" element={<NewsFeed />} />
-        <Route path="/newsForm" element={<NewsForm />} />
+        <Route path="/newsFeed" element={
+          <RequireAuth>
+            <NewsFeed />
+          </RequireAuth>
+
+        } />
+        <Route path="/newsForm" element={
+
+          <RequireAuth>
+            <NewsForm />
+          </RequireAuth>
+        } />
         {/* <Route path="/panel/:id" element={<Panel />} /> */}
         {/* <Route path="/addMembers/:id" element={<Panel />} /> */}
         <Route path="/gallery" element={
@@ -46,7 +57,7 @@ function App() {
 
         } />
         <Route path="/aboutus" element={<AboutUs />} />
-        {/* <Route path="*" element={<NotFound></NotFound>}></Route>  */}
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
