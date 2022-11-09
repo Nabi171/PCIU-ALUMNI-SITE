@@ -1,6 +1,7 @@
 import React from 'react';
 import Panel from '../Panel/Panel';
 import Subpaneladd from './Subpaneladd';
+import SubNewmemberDelete from './SubNewmemberDelete';
 
 const MainPanel = () => {
     return (
@@ -12,6 +13,7 @@ const MainPanel = () => {
            <div className='col-lg-6'>
            <Panel></Panel>
            </div>
+           <SubNewmemberDelete></SubNewmemberDelete>
            
         </div>
        </div>
