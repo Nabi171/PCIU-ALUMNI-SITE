@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Loading from '../Loading/Loading';
+import ShowDeltepost from './ShowDeltepost';
 
 const PostPanelDelte = () => {
     const [posts, setPosts] = useState([]);
@@ -12,7 +13,7 @@ const PostPanelDelte = () => {
         <div>
             <div className='row'>
                 {
-                    members ? members.map(member => <ShowPanel key={member.id} member={member}></ShowPanel>) : <Loading />
+                    posts ? posts.map(post => <ShowDeltepost key={post.id} post={post}></ShowDeltepost>) : <Loading />
 
                 }
             </div>
