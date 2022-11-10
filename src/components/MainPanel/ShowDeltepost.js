@@ -4,12 +4,12 @@ import { useParams } from 'react-router';
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
-const ShowDeltepost = (props) => {
-    const { _id, name, imageLink, phone, description, Supply, department } = props.member;
+const ShowDeltepost = ({ post }) => {
+    const { _id,name, department, message } = post;
     const [mems, setMems] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:4000/members")
+        fetch("http://localhost:4000/posts")
             .then(res => res.json())
             .then(data => setMems(data))
     }, []);
@@ -18,7 +18,7 @@ const ShowDeltepost = (props) => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure to delete and reload the page after delete?');
         if (proceed) {
-            const url = `http://localhost:4000/members/${id}`;
+            const url = `http://localhost:4000/posts/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -26,46 +26,31 @@ const ShowDeltepost = (props) => {
                 .then(data => {
                     console.log(data);
                     const rest = mems.filter(mem => mem._id !== id);
-                    toast.success('data deleted');
+                    toast.success('post deleted');
                     setMems(rest);
                     window.location.reload(false);
                 })
         }
     }
     return (
-        <div>
-            <Col>
-                <Card className='cards-container card-container selected-container'>
-                    <Card.Img variant="top" className='img-container   mx-auto  ' src={imageLink} />
-                    <Card.Body>
-                        <Card.Title >Student Name:{name}</Card.Title>
-                        <hr />
-                        <Card.Text>
-                            <span className='fw-bold'>Department Name:</span>{department}
-                        </Card.Text>
-
-
-                        <Card.Text>
-                            <span className='fw-bold'>Batch No:</span>{Supply}
-                        </Card.Text>
-                        <hr />
-                        <Card.Text>
-                            <span className='fw-bold'>Address:</span>{description}
-                        </Card.Text>
-                        <Card.Text>
-                            <span className='fw-bold'>Phone-Number:</span>{phone}
-                        </Card.Text>
-
-                    </Card.Body>
-                    <Button className='btn btn-danger' onClick={() => handleDelete(_id)}>Delete Id
-                        <ToastContainer></ToastContainer>
-                    </Button>
-
-                </Card>
-            </Col>
-
+        <div className='col-lg-12'>
+            <div className='card border bg-black p-4 '>
+                <blockquote className='text-white text-start blockquote'> <strong>{name}:</strong> {message}
+                </blockquote>
+                <div className='d-flex justify-content-end align-items-center text-white'>
+                    <hr className='text-white w-25' />
+                    <h6 className='ms-1'>Name:{name}</h6>
+                </div>
+                <h6 className='text-white text-end'>Departmet:{department}</h6>
+                <h6 className='text-white text-end'>Id No:1234</h6>
+                <Button className='btn btn-danger' onClick={() => handleDelete(_id)}>Delete Id
+               <ToastContainer></ToastContainer>
+                </Button>
+            </div>
         </div>
     );
 };
 
 export default ShowDeltepost;
+
+

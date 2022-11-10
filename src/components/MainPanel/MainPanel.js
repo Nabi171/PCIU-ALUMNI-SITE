@@ -2,6 +2,7 @@ import React from 'react';
 import Panel from '../Panel/Panel';
 import Subpaneladd from './Subpaneladd';
 import SubNewmemberDelete from './SubNewmemberDelete';
+import PostPanelDelte from './PostPanelDelte';
 
 const MainPanel = () => {
    return (
@@ -23,7 +24,11 @@ const MainPanel = () => {
                <hr className='text-white' />
             </div>
             <SubNewmemberDelete></SubNewmemberDelete>
-
+            <div className='mt-4'>
+               <h5 className='text-danger mx-auto fw-bold'>Manage Posts</h5>
+               <hr className='text-white' />
+            </div>
+            <PostPanelDelte></PostPanelDelte>
          </div>
       </div>
    );
