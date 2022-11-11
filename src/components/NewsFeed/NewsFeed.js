@@ -18,17 +18,6 @@ const NewsFeed = () => {
 
             </marquee>
             <hr className='text-white' />
-            <div className='card border bg-black p-4 mb-3'>
-                <blockquote className='text-white text-start blockquote'> <strong>Saif:</strong> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex dolores distinctio, placeat fugiat harum, velit alias sit dolorum eveniet, ea impedit ab ipsa deserunt et. Vel rem tempora molestiae recusandae?
-                </blockquote>
-                <div className='d-flex justify-content-end align-items-center text-white'>
-                    <hr className='text-white w-25' />
-                    <h6 className='ms-1'>Name:Saif</h6>
-                </div>
-                <h6 className='text-white text-end'>Departmet:Cse</h6>
-                <h6 className='text-white text-end'>Id No:1234</h6>
-            </div>
-            {/* <NewsForm></NewsForm> */}
 
             <StuNews></StuNews>
         </div>
