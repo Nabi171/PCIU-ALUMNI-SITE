@@ -78,6 +78,7 @@ Dr. Mahmuda Naznin (CSE 1996) <br/>
 
 -------------------------------------------- <br/>
 
+
 *Names with asterisk are Trustees who are also members of the Executive Committee
                 </p>
             </div>
