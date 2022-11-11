@@ -6,6 +6,7 @@ import footchamp from '../images/footballchamp.png';
 import orinFall from '../images/Orientation fall-22.jpg';
 import wallshw from '../images/Wallshow.jpg';
 import iftar from '../images/iftar.jpg';
+import UpcommingEvent from '../AboutUs/UpcommingEvent';
 const Events = () => {
     return (
         <div className='container'>
@@ -51,7 +52,7 @@ const Events = () => {
                     </div>
                 </div>
 
-
+                <UpcommingEvent></UpcommingEvent>
             </div>
         </div>
     );
