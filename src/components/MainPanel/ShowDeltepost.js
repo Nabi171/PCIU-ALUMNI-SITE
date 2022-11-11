@@ -33,7 +33,7 @@ const ShowDeltepost = ({ post }) => {
         }
     }
     return (
-        <div className='col-lg-12'>
+        <div className='mt-2'>
             <div className='card border bg-black p-4 '>
                 <blockquote className='text-white text-start blockquote'> <strong>{name}:</strong> {message}
                 </blockquote>

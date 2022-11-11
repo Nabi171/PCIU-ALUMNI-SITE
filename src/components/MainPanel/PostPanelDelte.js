@@ -11,7 +11,7 @@ const PostPanelDelte = () => {
     }, []);
     return (
         <div>
-            <div className='row'>
+            <div className='d-flex flex-column-reverse'>
                 {
                     posts ? posts.map(post => <ShowDeltepost key={post.id} post={post}></ShowDeltepost>) : <Loading />
 

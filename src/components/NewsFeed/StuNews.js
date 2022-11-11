@@ -10,7 +10,7 @@ const StuNews = () => {
             .then(data => setPosts(data));
     }, []);
     return (
-        <div className='row-reverse gy-3'>
+        <div className=' d-flex flex-column-reverse  '>
             {
                 posts ? posts.map(post => <ShowNews key={post.id} post={post}></ShowNews>) : <Loading />
 

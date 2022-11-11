@@ -2,7 +2,7 @@ import React from 'react';
 import '../NewsFeed/NewsheadPanel.css';
 const NewsHeadPanel = () => {
     return (
-        <div>
+        <div>\
             <h4 className='text-danger mx-auto my-2'>Our Estimed Faculty Members</h4>
             <div className='row'>
 
