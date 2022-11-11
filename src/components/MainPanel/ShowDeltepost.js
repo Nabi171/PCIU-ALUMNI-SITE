@@ -5,7 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
 const ShowDeltepost = ({ post }) => {
-    const { _id,name, department, message } = post;
+    const { _id, name, department, message } = post;
     const [mems, setMems] = useState([]);
 
     useEffect(() => {
@@ -43,7 +43,7 @@ const ShowDeltepost = ({ post }) => {
                 </div>
                 <h6 className='text-white text-end'>Departmet:{department}</h6>
                 <h6 className='text-white text-end'>Id No:1234</h6>
-                <Button className='btn btn-danger' onClick={() => handleDelete(_id)}>Delete Id
+                <Button className='btn btn-danger' onClick={() => handleDelete(_id)}>Delete post
                <ToastContainer></ToastContainer>
                 </Button>
             </div>

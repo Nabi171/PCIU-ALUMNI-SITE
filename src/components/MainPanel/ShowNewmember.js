@@ -58,7 +58,7 @@ const ShowNewmember = (props) => {
                             </Card.Text>
 
                         </Card.Body>
-                        <Button className='btn btn-danger' onClick={() => handleDelete(_id)}>Delete Id
+                        <Button className='btn btn-danger' onClick={() => handleDelete(_id)}>Delete Member
             <ToastContainer></ToastContainer>
                         </Button>
 
