@@ -3,7 +3,7 @@ import '../NewsFeed/NewsheadPanel.css';
 const NewsHeadPanel = () => {
     return (
         <div>
-            <h3 className='text-white mx-auto my-2'>Our Estimed Faculty Members</h3>
+            <h4 className='text-danger mx-auto my-2'>Our Estimed Faculty Members</h4>
             <div className='row'>
 
                 <div className='col-sm-4 text-white'>
@@ -27,7 +27,7 @@ const NewsHeadPanel = () => {
                     <p><i>MIT</i></p>
 
                 </div>
-             
+
             </div>
             <hr className='text-white' />
         </div>
